@@ -1265,7 +1265,7 @@ BeachBall.StartProgram = function() {
 	BeachBall.SpyRefresh();
 	BeachBall.LoadAutoclickFav();
 	Molpy.Notify("Sandcastle Builder Automation v" + BeachBall.version + ' has been loaded.', 1);
-	Molpy.Notify("Check options to change settings.', 1);
+	Molpy.Notify('Check options to change settings.', 1);
 	if (BeachBall.storage == 0) {
 		Molpy.Notify('No Local Storage Available. BeachBall settings will NOT be saved.',1);
 	}
