@@ -1055,7 +1055,7 @@ BeachBall.DisplayDescription = function(option,type) {
 	
 	if (option == 'BeachAutoClick') {
 		clearInterval(BeachBall.BeachAutoClickTimer);
-		if (me.status >= 2) {
+		if (me.status == 1) {
 			BeachBall.BeachAutoClickTimer = setInterval(BeachBall.ClickBeach, 1000/me.setting);
 		}
 	}
@@ -1091,7 +1091,7 @@ BeachBall.LoadDefaultSetting = function (option, key) {
 	else if (option == 'BeachAutoClick') {
 		if (key == 'title')		{return 'Beach AutoClick';}
 		if (key == 'status') 	{return 1;}
-		if (key == 'maxStatus') {return 2;}
+		if (key == 'maxStatus') {return 1;}
 		if (key == 'setting')	{return 1;}
 		if (key == 'minSetting'){return 1;}
 		if (key == 'maxSetting'){return 1000;}
