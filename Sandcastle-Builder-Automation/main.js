@@ -1007,7 +1007,7 @@ BeachBall.CreateMenu = function() {
 	
 	new Molpy.Option({
 		name: 'BB.title',
-		title: '<h3 style="font-size:150%; color:red">BeachBall Settings</h3> ',		
+		title: '<h3 style="font-size:150%; color:white">Automation Settings</h3> ',		
 		breakafter : true,
 		text: function() { return '<h4 style"font-size:75%">v ' + BeachBall.version + '</div>' },
 	});
