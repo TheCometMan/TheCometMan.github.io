@@ -6,7 +6,7 @@ BeachBall.lootBoxes = ['boosts', 'badges', 'hpt', 'ninj', 'chron', 'cyb', 'bean'
 BeachBall.resetCaged = 0;
 
 //Version Information
-BeachBall.version = '5.2.3.5 (Ninja?)';
+BeachBall.version = '5.2.3.6 (Ninja!!!)';
 BeachBall.SCBversion = '3.4121'; //Last SandCastle Builder version tested
 
 //BB Audio Alerts Variables
@@ -665,14 +665,14 @@ BeachBall.MontyHaul = function() {
 
 BeachBall.ClickBeach = function(number) {
 	//If not ninja'd
-	if (Molpy.ninjad != 0){
-		if (BeachBall.Time_to_ONG >= 5){
+	if (!Molpy.ninjad){
+		if(Molpy.npbONG) {
 			Molpy.ClickBeach();
 		}
 	}
 	//If ninja'd	
 	else { 
-		//Molpy.ClickBeach(); 
+		Molpy.ClickBeach(); 
 	}
 }
 
