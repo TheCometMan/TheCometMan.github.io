@@ -1084,12 +1084,12 @@ BeachBall.LoadDefaultSetting = function (option, key) {
 	else if (option == 'BeachAutoClick') {
 		if (key == 'title')		{return 'Beach AutoClick';}
 		if (key == 'status') 	{return 1;}
-		if (key == 'maxStatus') {return 3;}
+		if (key == 'maxStatus') {return 2;}
 		if (key == 'setting')	{return 1;}
 		if (key == 'minSetting'){return 1;}
 		if (key == 'maxSetting'){return 1000;}
-		if (key == 'msg')		{return 'Please enter your desired clicking rate per second (1 - 20):';}
-		if (key == 'desc')		{return ['Off', 'Keep Ninja Stealth', 'On: <a onclick="BeachBall.SwitchSetting(\'BeachAutoClick\')">' + BeachBall.Settings[option].setting + ' cps</a>','On: <a onclick="BeachBall.SwitchSetting(\'BeachAutoClick\')">' + BeachBall.Settings[option].setting + ' cps</a><br/>(with ninja ritual)'];}
+		if (key == 'msg')		{return 'Please enter your desired clicking rate per second (1 - 1000) [Note: Click rates past 20 prevent game mechanics, recommend switching on and off]';}
+		if (key == 'desc')		{return ['Off','on, CPS: <a onclick="BeachBall.SwitchSetting(\'BeachAutoClick\')">' + BeachBall.Settings[option].setting + ' cps</a><br/>(with Keep Ninja Stealth)'];}
 	}
 	else if (option == 'CagedAutoClick') {
 		if (key == 'title')		{return 'Caged Logicat AutoClick';}
