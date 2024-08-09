@@ -6,7 +6,7 @@ BeachBall.lootBoxes = ['boosts', 'badges', 'hpt', 'ninj', 'chron', 'cyb', 'bean'
 BeachBall.resetCaged = 0;
 
 //Version Information
-BeachBall.version = '5.2.1.1';
+BeachBall.version = '5.2.1.3';
 BeachBall.SCBversion = '3.4121'; //Last SandCastle Builder version tested
 
 //BB Audio Alerts Variables
@@ -664,8 +664,15 @@ BeachBall.MontyHaul = function() {
 }
 
 BeachBall.ClickBeach = function(number) {
-	if (Molpy.Got('Temporal Rift') == 0 && Molpy.ninjad != 0 && BeachBall.Time_to_ONG >= 5){
-		Molpy.ClickBeach();
+	//If not ninja'd
+	if (Molpy.ninjad == 0){
+		if (Molpy.ninjad != 0  && BeachBall.Time_to_ONG >= 5){
+			Molpy.ClickBeach();
+		}
+	}
+	//If ninja'd	
+	else { 
+		Molpy.ClickBeach(); 
 	}
 }
 
@@ -710,18 +717,18 @@ BeachBall.Ninja = function() {
 
 	if (Molpy.ninjad == 0) {
 		if ((BeachBall.Settings['BeachAutoClick'].status == 3) && (Molpy.Got('Temporal Rift') == 0)) {
-			Molpy.ClickBeach();
-			Molpy.Notify('Ninja Ritual Auto Click', 1);
+			/*Molpy.ClickBeach();
+			Molpy.Notify('Ninja Ritual Auto Click', 1);*/
 		}
         if (Molpy.npbONG != 0) {
             BeachBall.incoming_ONG = 0;
             if (BeachBall.Settings['BeachAutoClick'].status > 0 && Molpy.Got('Temporal Rift') == 0) {
-				Molpy.ClickBeach();
+				/*Molpy.ClickBeach();
 				Molpy.Notify('Ninja Auto Click', 1);
 				if (BeachBall.resetCaged == 1) {
 					BeachBall.Settings['CagedAutoClick'].status = 1;
 					BeachBall.resetCaged = 0;
-				}
+				}*/
 			}
 			/*If the Caged Logicats are essentially infinite in number (thus Temporal Rift is always active)
 			 *the autoclicker needs to be paused to allow temporal rift to end to process the click, then resumed*/
